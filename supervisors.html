@@ -15,18 +15,15 @@
     </header>
     <main>
         <h2>بيانات المشرفين</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>اسم المشرفة</th>
-                    <th>اسم المستخدم</th>
-                    <th>رقم الجوال</th>
-                </tr>
-            </thead>
+        <label>
+<label for="name">اسم المشرفه:</label>
+            <input type="text" id="name" name="name" required><br>
+<label for="number"> رقم المشرفه:</label>
+            <input type="text" id="number" number="number" required><br>
             <tbody id="supervisorsTable">
                 <!-- البيانات ستتم إضافتها هنا -->
             </tbody>
-        </table>
+        </label>
     </main>
     <script>
         const supervisorsTable = document.getElementById("supervisorsTable");
