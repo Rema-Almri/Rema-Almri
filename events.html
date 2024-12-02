@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>صفحة الفعاليات</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="IMG_4025.PNG" alt="شعار الكلية التقنية">
+            <h1>مكتبة الكلية التقنية</h1>
+        </div>
+    </header>
+    <main>
+        <h2>الفعاليات</h2>
+        <div id="eventGallery">
+            <!-- الصور تُضاف ديناميكيًا هنا -->
+        </div>
+        <form id="addEventForm">
+            <label for="eventImage">إضافة صورة فعالية:</label>
+            <input type="file" id="eventImage" accept="image/*" required>
+            <button type="submit">إضافة</button>
+        </form>
+    </main>
+</body>
+<script>
+    document.getElementById("addEventForm").addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const fileInput = document.getElementById("eventImage");
+        const file = fileInput.files[0];
+
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = function (e) {
+                const img = document.createElement("img");
+                img.src = e.target.result;
+                img.alt = "صورة فعالية";
+                img.style.width = "200px";
+                img.style.margin = "10px";
+
+                document.getElementById("eventGallery").appendChild(img);
+            };
+            reader.readAsDataURL(file);
+        }
+
+        fileInput.value = ""; // مسح الحقل بعد الإضافة
+    });
+</script>
+</html>
