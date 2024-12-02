@@ -3,109 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="مكتبة الكلية التقنية تقدم خدمات استعارة الكتب واحتياجات الطلاب الجامعيين">
-    <meta name="keywords" content="مكتبة الكلية التقنية, استعارة كتب, تقنية, الكتب, الطلاب, الكلية التقنية">
-    <meta name="author" content="اسمك أو اسم الكلية">
-    <title>مكتبة الكلية التقنية</title>
-    <link rel="icon" href="IMG_4025.PNG"> <!-- شعار الكلية -->
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            color: black;
-            text-align: center;
-            margin: 0;
-            padding: 0;
-        }
-        h1 {
-            margin-top: 50px;
-            color: #333;
-            font-size: 36px;
-        }
-        .form-container {
-            display: inline-block;
-            background-color: white;
-            padding: 20px;
-            border: 1px solid #ccc;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            text-align: right;
-            margin-top: 30px;
-        }
-        label {
-            font-size: 18px;
-            margin-top: 15px;
-            display: block;
-        }
-        input[type="text"], input[type="date"] {
-            width: 80%;
-            padding: 10px;
-            margin: 10px 0;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-        }
-        button {
-            padding: 10px 20px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            margin-top: 15px;
-        }
-        button:hover {
-            background-color: #45a049;
-        }
-        img {
-            margin-top: 20px;
-            width: 200px;
-            height: auto;
-        }
-    </style>
+    <title>متدربات - مكتبة الكلية التقنية</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>مكتبة الكلية التقنية</h1>
-    <img src="IMG_4025.PNG" alt="شعار الكلية التقنية">
 
-    <div class="form-container">
-        <form action="process_form.php" method="POST">
-            <label for="name">اسم المتدربة:</label>
-            <input type="text" id="name" name="name" required><br>
+    <!-- الهيدر -->
+    <header>
+        <img src="IMG_4025.PNG" alt="شعار الكلية التقنية" class="logo">
+        <h1>مكتبة الكلية التقنية</h1>
+    </header>
 
-            <label for="training_number">الرقم التدريبي:</label>
-            <input type="text" id="training_number" name="training_number" required><br>
-
-            <label for="book_title">اسم الكتاب المستعار:</label>
-            <input type="text" id="book_title" name="book_title" required><br>
-
-            <label for="author">المؤلف:</label>
-            <input type="text" id="author" name="author" required><br>
-
-            <label for="borrow_date">تاريخ الاستعارة:</label>
-            <input type="date" id="borrow_date" name="borrow_date" required><br>
-
-            <label for="return_date">تاريخ الإرجاع:</label>
-            <input type="date" id="return_date" name="return_date" required><br>
-
+    <!-- نموذج إدخال البيانات للمتدربات -->
+    <main>
+        <h2>تسجيل بيانات المتدربة</h2>
+        <form action="submit_trainee.php" method="POST">
+            <table>
+                <tr>
+                    <td><label for="trainee_name">اسم المتدربة:</label></td>
+                    <td><input type="text" id="trainee_name" name="trainee_name" required></td>
+                </tr>
+                <tr>
+                    <td><label for="training_number">الرقم التدريبي:</label></td>
+                    <td><input type="text" id="training_number" name="training_number" required></td>
+                </tr>
+                <tr>
+                    <td><label for="book_name">اسم الكتاب المستعار:</label></td>
+                    <td><input type="text" id="book_name" name="book_name" required></td>
+                </tr>
+                <tr>
+                    <td><label for="author">اسم المؤلف:</label></td>
+                    <td><input type="text" id="author" name="author" required></td>
+                </tr>
+                <tr>
+                    <td><label for="borrow_date">تاريخ الاستعارة:</label></td>
+                    <td><input type="date" id="borrow_date" name="borrow_date" required></td>
+                </tr>
+                <tr>
+                    <td><label for="return_date">تاريخ الإرجاع:</label></td>
+                    <td><input type="date" id="return_date" name="return_date" required></td>
+                </tr>
+            </table>
             <button type="submit">إرسال</button>
         </form>
-    </div>
+    </main>
 
-    <script>
-        // تأكد من أن جميع الحقول مكتملة قبل إرسال النموذج
-        document.querySelector('form').addEventListener('submit', function(event) {
-            let name = document.getElementById('name').value;
-            let trainingNumber = document.getElementById('training_number').value;
-            let bookTitle = document.getElementById('book_title').value;
-            let author = document.getElementById('author').value;
-            let borrowDate = document.getElementById('borrow_date').value;
-            let returnDate = document.getElementById('return_date').value;
+    <footer>
+        <p>&copy; 2024 مكتبة الكلية التقنية</p>
+    </footer>
 
-            if (!name || !trainingNumber || !bookTitle || !author || !borrowDate || !returnDate) {
-                alert('يرجى ملء جميع الحقول!');
-                event.preventDefault(); // منع إرسال النموذج إذا كانت الحقول غير مكتملة
-            }
-        });
-    </script>
 </body>
 </html>
