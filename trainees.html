@@ -31,26 +31,5 @@
             </tbody>
         </table>
     </main>
-    <script>
-        const traineesTable = document.getElementById("traineesTable");
-
-        // إضافة بيانات المتدربات
-        function addTrainee(name, trainingNumber, bookName, author, borrowDate, returnDate) {
-            const row = document.createElement("tr");
-            row.innerHTML = `
-                <td>${name}</td>
-                <td>${trainingNumber}</td>
-                <td>${bookName}</td>
-                <td>${author}</td>
-                <td>${borrowDate}</td>
-                <td>${returnDate}</td>
-            `;
-            traineesTable.appendChild(row);
-        }
-
-        // مثال على البيانات
-        addTrainee("ريما", "12345", "كتاب البرمجة", "جون دو", "2024-11-20", "2024-12-01");
-        addTrainee("رنا", "67890", "كتاب التصميم", "جاك سميث", "2024-11-18", "2024-12-05");
-    </script>
 </body>
 </html>
