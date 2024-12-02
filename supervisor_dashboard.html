@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مكتبة الكلية التقنية - لوحة المشرفات</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="header-content">
+        <img src="IMG_4025.PNG" alt="شعار الكلية التقنية" class="logo">
+        <h1>مكتبة الكلية التقنية</h1>
+    </div>
+</header>
+
+<main>
+    <section class="dashboard">
+        <h2>إدارة الفعاليات</h2>
+        <form>
+            <label for="event_image">إضافة صورة للفعالية:</label>
+            <input type="file" id="event_image" name="event_image"><br>
+            <label for="event_details">تفاصيل الفعالية:</label><br>
+            <textarea id="event_details" name="event_details"></textarea><br>
+            <input type="submit" value="إضافة فعالية">
+        </form>
+
+        <h3>إدارة الكتب المستعارة</h3>
+        <table>
+            <tr>
+                <th>اسم الكتاب</th>
+                <th>حالة الكتاب</th>
+                <th>تعديل الحالة</th>
+            </tr>
+            <tr>
+                <td>اسم الكتاب 1</td>
+                <td>لم يتم تسليمه</td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr>
+                <td>اسم الكتاب 2</td>
+                <td>تم تسليمه</td>
+                <td><input type="checkbox" checked></td>
+            </tr>
+        </table>
+
+        <h3>إحصائيات الكتب والفعاليات</h3>
+        <p>عدد الكتب المستعارة: 10</p>
+        <p>عدد الفعاليات القادمة: 2</p>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2024 مكتبة الكلية التقنية</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,151 @@
+/* تنسيق عام */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    direction: rtl;
+}
+
+/* تنسيق الهيدر */
+header {
+    background-color: #f0f0f0;
+    padding: 10px;
+    text-align: right;
+    position: relative;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 40px;
+    height: auto;
+}
+
+h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+/* هذا الي حطيت أيقونات الواتساب والتلجرام تحت صفحات المتدربات والمشرفات */
+.social-links {
+    text-align: center; /* لتحسين تنسيق الأيقونات */
+    margin-top: 20px;  /* إضافة مسافة من أعلى الصفحة */
+}
+
+.social-links a {
+    margin: 0 15px; /* إضافة مسافة بين الأيقونات */
+    text-decoration: none;
+    color: #0077b5;
+    font-size: 18px;
+}
+
+/* تنسيق الفوتر */
+footer {
+    text-align: center;
+    background-color: #f0f0f0;
+    padding: 20px;
+    font-size: 14px;
+    color: #555;
+}
+
+/* تنسيق المحتوى الرئيسي */
+main {
+    padding: 20px;
+}
+
+/* تنسيق الفقرات والعناوين */
+h2 {
+    font-size: 22px;
+    margin-top: 20px;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* تنسيق الروابط */
+a {
+    color: #0077b5;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* تنسيق النماذج */
+form {
+    margin-top: 20px;
+    display: block;
+    width: 100%;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    font-size: 16px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+form input[type="text"],
+form input[type="date"],
+form input[type="password"],
+form textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+form input[type="submit"] {
+    background-color: #0077b5;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+    background-color: #005f8b;
+}
+
+/* تنسيق الجداول */
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+table th, table td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+table th {
+    background-color: #f0f0f0;
+}
+
+/* تنسيق الجدول الخاص بالفعاليات */
+.event-image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-top: 20px;
+}
