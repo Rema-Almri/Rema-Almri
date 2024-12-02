@@ -1,146 +1,63 @@
-/* إعدادات الصفحة العامة */
+/* الأساسيات */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f9f9f9;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: white;
     text-align: center;
-    color: #333;
 }
 
-/* تنسيق الشعار واسم المكتبة */
-.header-container {
+header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #ffffff;
-    padding: 20px 30px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 100;
-}
-
-/* تنسيق الشعار */
-.header-container img {
-    width: 90px;
-    height: auto;
-    border-radius: 5px;
-}
-
-/* تنسيق اسم المكتبة */
-.header-container h1 {
-    font-size: 28px;
-    color: #00796b; /* لون مميز */
-    margin: 0;
-}
-
-/* الخط تحت العنوان */
-.line {
-    margin-top: 100px;
-    border-top: 2px solid #00796b;
-    width: 80%;
-    margin: 20px auto;
-}
-
-/* تنسيق النموذج */
-.form-container {
-    background-color: #ffffff;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin-top: 100px;
-    width: 50%;
-    text-align: right;
-    margin: 40px auto;
-}
-
-/* تنسيق العناصر داخل النموذج */
-label {
-    font-size: 18px;
-    margin-bottom: 8px;
-    display: block;
-    color: #00796b;
-}
-
-input[type="text"], input[type="date"] {
-    width: calc(100% - 20px);
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #f9f9f9;
-    font-size: 16px;
-    color: #555;
-}
-
-input[type="text"]:focus, input[type="date"]:focus {
-    border-color: #00796b;
-    outline: none;
-}
-
-/* تنسيق زر الإرسال */
-button {
-    padding: 12px 25px;
-    background-color: #00796b;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 18px;
-}
-
-button:hover {
-    background-color: #004d40;
-}
-
-/* تنسيق الجدول */
-table {
-    width: 80%;
-    margin-top: 40px;
-    border-collapse: collapse;
-    margin: 50px auto;
-}
-
-th, td {
-    padding: 12px 15px;
-    text-align: center;
-    border: 1px solid #ddd;
-    font-size: 16px;
-}
-
-th {
-    background-color: #00796b;
-    color: white;
-}
-
-td {
-    background-color: #f9f9f9;
-}
-
-td:hover {
-    background-color: #e0f2f1;
-}
-
-table tbody tr:nth-child(even) {
     background-color: #f1f1f1;
+    padding: 10px 20px;
 }
 
-/* تنسيق الصفحة على الشاشات الصغيرة */
-@media (max-width: 768px) {
-    .form-container {
-        width: 80%;
-    }
-    .header-container {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    .header-container h1 {
-        font-size: 24px;
-    }
-    table {
-        width: 90%;
-    }
+header img.logo {
+    width: 50px;
+    height: auto;
+}
+
+header h1 {
+    font-size: 24px;
+    color: #333;
+}
+
+.social-icons a {
+    text-decoration: none;
+    color: #007bff;
+    margin: 0 10px;
+}
+
+main {
+    padding: 20px;
+}
+
+h2 {
+    font-size: 20px;
+    color: #333;
+}
+
+#event-image img {
+    width: 100%;
+    max-width: 600px;
+    margin: 20px 0;
+}
+
+.navigation a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+footer {
+    background-color: #f1f1f1;
+    padding: 10px;
+    text-align: center;
 }
